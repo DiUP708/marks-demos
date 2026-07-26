@@ -144,11 +144,21 @@ function showLeadCard(name, phone){
   }, 1300);
 }
 function answer(q){
-  const s=q.toLowerCase();
+  const s=q.toLowerCase().trim();
+  // SVEICIENS — atbild silti, nesāk ar atrunu
+  if(s.length<=3 || /^(sveik|čau|cau|labdien|labr|labvakar|hei|hey|hello|hallo|helo|hi|привет|здрав|прив)/.test(s)){
+    return "Sveiki! 😊 Prieks jūs redzēt. Varu pastāstīt par pakalpojumiem, cenām un darba laikiem, vai uzreiz pierakstīt jūs. Kas jūs interesē?";
+  }
+  // PATEICĪBA
+  if(/(paldies|thank|спасиб|благодар)/.test(s)) return "Prieks palīdzēt! 😊 Vai ir vēl kāds jautājums, vai pierakstīt jūs?";
+  // JĀ / labi / ok — piedāvā pierakstu
+  if(/^(jā|ja|labi|ok|okay|davai|да|jāā)\b/.test(s)){state="name";return P.lead_q;}
+  // PIERAKSTS
   if(P.book.some(k=>s.includes(k))){state="name";return P.lead_q;}
+  // NOTEIKUMI (cenas, laiki utt.)
   for(const r of P.rules){ if(r.k.some(k=>s.includes(k.toLowerCase()))){ if(r.lead)state="name"; return r.a; } }
-  state="name";
-  return "Labs jautājums! Šo gan precizēšu pie kolēģiem, lai neko nesajauktu. 🙏 Atstājiet, lūdzu, savu vārdu un tālruni — atbildēsim jums personīgi. Kā jūs sauc?";
+  // SILTS fallback — palīdz, NE uzreiz prasa vārdu/tālruni
+  return "Labs jautājums! 😊 Varu palīdzēt ar cenām, darba laikiem vai pierakstīt jūs. Uzrakstiet, kas tieši jūs interesē, vai izvēlieties kādu no pogām augšā — un ja gribat, pierakstu jūs uzreiz. 🙂";
 }
 function send(){
   const q=inp.value.trim(); if(!q)return; inp.value="";
