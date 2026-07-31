@@ -84,5 +84,15 @@
   Tarrant Roofing · your area · Licensed &amp; Insured Roofing Contractor<br>
   <span style="opacity:.6;font-size:12px;">Demo website concept · built to show a modern web presence</span>
 </footer>
+<script>
+(function(){
+  try{
+    var parts = location.pathname.split('/').filter(Boolean);
+    var slug = parts[parts.length - 1] || 'root';
+    var img = new Image();
+    img.src = 'http://169.58.4.28:8001/api/demo_view?slug=' + encodeURIComponent(slug) + '&t=' + Date.now();
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
