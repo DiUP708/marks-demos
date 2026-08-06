@@ -1,89 +1,494 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Northwest Austin Dentists — Austin, TX Dental</title>
+<!doctype html><html lang="lv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Northwest Austin Dentists — Zobārstniecība</title></head><body>
 <style>
-  :root{ --brand:#0f7c8c; --brand-d:#0b606d; --ink:#1c1a19; --muted:#5f5a55; --bg:#ffffff; --soft:#ebf4f5; }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6;}
-  .demo-flag{background:#111;color:#fff;text-align:center;font-size:13px;padding:7px;}
-  header{background:var(--soft);padding:18px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-  .logo{font-weight:800;font-size:20px;color:var(--brand);}
-  .logo span{color:var(--ink);}
-  nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;}
-  .cta-btn{background:var(--brand);color:#fff!important;padding:10px 18px;border-radius:8px;}
-  .hero{background:linear-gradient(rgba(20,15,12,.72),rgba(20,15,12,.72)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23333"/></svg>');background-size:cover;color:#fff;padding:90px 24px;text-align:center;}
-  .hero h1{font-size:clamp(30px,6vw,52px);line-height:1.1;max-width:760px;margin:0 auto 16px;}
-  .hero p{font-size:19px;max-width:560px;margin:0 auto 28px;opacity:.95;}
-  .hero a{display:inline-block;background:var(--brand);color:#fff;padding:16px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:18px;}
-  .trust{background:var(--brand-d);color:#fff;text-align:center;padding:14px;font-weight:600;letter-spacing:.02em;}
-  section{max-width:1040px;margin:0 auto;padding:64px 24px;}
-  h2{font-size:32px;text-align:center;margin-bottom:12px;}
-  .sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 40px;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;}
-  .card{background:var(--soft);border-radius:14px;padding:26px;}
-  .card h3{color:var(--brand);margin-bottom:8px;font-size:19px;}
-  .why{background:var(--soft);}
-  .why .grid{max-width:1040px;margin:0 auto;}
-  .stat{text-align:center;}
-  .stat b{display:block;font-size:38px;color:var(--brand);}
-  .quote{background:#fff;border-left:4px solid var(--brand);padding:18px 22px;border-radius:8px;font-style:italic;color:#333;}
-  .final{background:var(--brand);color:#fff;text-align:center;}
-  .final a{display:inline-block;background:#fff;color:var(--brand);padding:16px 30px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:18px;}
-  footer{background:var(--ink);color:#cbc4bd;text-align:center;padding:30px 24px;font-size:14px;}
+  :root{
+    --ground:#F3F5F7; --panel:#FFFFFF; --panel-2:#EDF1F4;
+    --ink:#0C1A2B; --ink-soft:#43566B; --line:#DBE3EA;
+    --gold:#E09A38; --gold-deep:#C67F23; --teal:#0FB9A6; --teal-soft:#5AD6C6;
+    --shadow:0 24px 60px -24px rgba(12,26,43,.28);
+    --shadow-sm:0 8px 24px -12px rgba(12,26,43,.22);
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#070E18; --panel:#0E1826; --panel-2:#132234;
+      --ink:#EAF1F8; --ink-soft:#9DB0C4; --line:#20304473;
+      --gold:#F0B054; --gold-deep:#E09A38; --teal:#2BD6C0; --teal-soft:#4FE0CD;
+      --shadow:0 30px 70px -28px rgba(0,0,0,.7);
+      --shadow-sm:0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#F3F5F7; --panel:#FFFFFF; --panel-2:#EDF1F4; --ink:#0C1A2B;
+    --ink-soft:#43566B; --line:#DBE3EA; --gold:#E09A38; --gold-deep:#C67F23;
+    --teal:#0FB9A6; --teal-soft:#5AD6C6; --shadow:0 24px 60px -24px rgba(12,26,43,.28);
+    --shadow-sm:0 8px 24px -12px rgba(12,26,43,.22);
+  }
+  :root[data-theme="dark"]{
+    --ground:#070E18; --panel:#0E1826; --panel-2:#132234; --ink:#EAF1F8;
+    --ink-soft:#9DB0C4; --line:#20304473; --gold:#F0B054; --gold-deep:#E09A38;
+    --teal:#2BD6C0; --teal-soft:#4FE0CD; --shadow:0 30px 70px -28px rgba(0,0,0,.7);
+    --shadow-sm:0 10px 30px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--sans);background:var(--ground);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;letter-spacing:-.01em;line-height:1.08}
+  .eyebrow{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;
+    font-weight:650;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.25s;font-family:var(--sans)}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#1a1204;
+    box-shadow:0 12px 28px -10px rgba(224,154,56,.6)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(224,154,56,.7)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:color-mix(in srgb,var(--ground) 80%,transparent);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:600}
+  .mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(140deg,var(--teal),var(--gold));color:#04120f;font-family:var(--sans);font-weight:800;font-size:17px}
+  .nav-links{display:flex;gap:30px;font-size:15px;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .toggle{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel);
+    cursor:pointer;font-size:16px;display:grid;place-items:center;color:var(--ink)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{position:relative;padding:76px 0 90px;overflow:hidden}
+  #mesh{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9}
+  .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.4vw,64px);margin:16px 0 18px}
+  .hero p.lead{font-size:19px;color:var(--ink-soft);max-width:30em;margin:0 0 30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .live-badge{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:13.5px;color:var(--ink-soft)}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 26%,transparent)}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+  .dot{animation:pulse 2s ease-in-out infinite}
+
+  /* 3D STAGE */
+  .stage{position:relative;height:440px;perspective:1200px}
+  .float{position:absolute;border-radius:18px;background:var(--panel);border:1px solid var(--line);
+    box-shadow:var(--shadow);padding:18px 20px;transform-style:preserve-3d;transition:transform .12s ease-out;will-change:transform}
+  .fc1{top:20px;left:6%;width:230px}
+  .fc2{top:150px;right:2%;width:250px;z-index:3}
+  .fc3{bottom:6px;left:16%;width:210px}
+  .float .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:10px}
+  .float h4{margin:0;font-family:var(--sans);font-size:15.5px;font-weight:700}
+  .float span{font-size:13px;color:var(--ink-soft)}
+  .price{font-family:var(--serif);font-size:22px;color:var(--gold);font-weight:600}
+  #sphere{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+  #sphere:active{cursor:grabbing}
+  .orbit-hint{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);font-size:12px;
+    color:var(--ink-soft);letter-spacing:.04em;opacity:.7}
+  .fc2{top:8%;right:-2%;z-index:4;animation:bob 5s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  /* kinētisks virsraksts */
+  .hero h1 .w{display:inline-block;opacity:0;transform:translateY(24px) rotateX(-40deg);
+    animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media(max-width:860px){.hero-in{grid-template-columns:1fr}.stage{height:340px;margin-top:10px}.fc2{display:none}}
+  @media(prefers-reduced-motion:reduce){.hero h1 .w{opacity:1;transform:none;animation:none}.fc2{animation:none}}
+
+  /* SECTIONS */
+  section.blk{padding:84px 0}
+  .head{max-width:34em;margin-bottom:44px}
+  .head h2{font-size:clamp(28px,3.6vw,42px);margin:12px 0 0}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.grid3{grid-template-columns:1fr}}
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:26px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s;transform-style:preserve-3d}
+  .card:hover{box-shadow:var(--shadow)}
+  .card .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:22px;margin-bottom:16px;
+    background:color-mix(in srgb,var(--teal) 16%,var(--panel));border:1px solid color-mix(in srgb,var(--teal) 30%,transparent)}
+  .card h3{font-size:20px;margin:0 0 8px}
+  .card p{margin:0 0 14px;color:var(--ink-soft);font-size:15px}
+  .card .from{font-family:var(--serif);color:var(--gold);font-weight:600;font-size:19px}
+
+  /* STATS */
+  .stats{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:40px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;box-shadow:var(--shadow-sm)}
+  .stat b{font-family:var(--serif);font-size:clamp(30px,4vw,46px);display:block;line-height:1;
+    background:linear-gradient(120deg,var(--gold),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{color:var(--ink-soft);font-size:14px}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* TESTIMONIAL */
+  .quote{max-width:44em;margin:0 auto;text-align:center}
+  .quote p{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.4;margin:0 0 22px}
+  .quote .who{color:var(--ink-soft);font-size:15px}
+
+  /* CTA */
+  .cta-band{position:relative;overflow:hidden;border-radius:28px;padding:64px 40px;text-align:center;
+    background:linear-gradient(135deg,var(--ink),color-mix(in srgb,var(--ink) 82%,var(--teal)));color:#EAF1F8}
+  .cta-band h2{color:#fff;font-size:clamp(28px,3.8vw,44px);margin:0 0 14px}
+  .cta-band p{color:#A9BCd0;max-width:32em;margin:0 auto 28px;font-size:17px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-soft);font-size:14px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+
+  /* CHAT WIDGET */
+  .chat-fab{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;
+    border:none;cursor:pointer;background:linear-gradient(140deg,var(--teal),var(--gold));color:#04120f;
+    font-size:26px;box-shadow:0 18px 40px -12px rgba(15,185,166,.6);display:grid;place-items:center;transition:.25s}
+  .chat-fab:hover{transform:scale(1.06)}
+  .chat-panel{position:fixed;right:22px;bottom:96px;z-index:60;width:340px;max-width:calc(100vw - 32px);
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+    overflow:hidden;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:.28s}
+  .chat-panel.on{transform:none;opacity:1;pointer-events:auto}
+  .chat-hd{background:linear-gradient(135deg,var(--teal),var(--teal-soft));color:#03130f;padding:15px 18px}
+  .chat-hd b{font-size:15.5px}.chat-hd small{display:block;opacity:.8;font-size:12px}
+  .chat-body{padding:16px;height:250px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;background:var(--panel-2)}
+  .bub{max-width:82%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45}
+  .bub.bot{background:var(--panel);border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:4px}
+  .bub.usr{background:var(--gold);color:#1a1204;align-self:flex-end;border-bottom-right-radius:4px}
+  .chat-in{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:var(--panel)}
+  .chat-in input{flex:1;border:1px solid var(--line);background:var(--ground);color:var(--ink);
+    border-radius:999px;padding:10px 15px;font-size:14px;outline:none;font-family:var(--sans)}
+  .chat-in input:focus{border-color:var(--teal)}
+  .chat-in button{border:none;background:var(--teal);color:#03130f;width:40px;border-radius:50%;cursor:pointer;font-size:16px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  .tmpl{position:fixed;left:14px;bottom:14px;z-index:60;font-size:11px;letter-spacing:.05em;
+    background:var(--panel);border:1px solid var(--line);color:var(--ink-soft);padding:6px 11px;border-radius:999px;box-shadow:var(--shadow-sm)}
 </style>
-</head>
-<body>
-<div class="demo-flag">✦ DEMO preview built for Northwest Austin Dentists — this is a concept, not the live site ✦</div>
-<header>
-  <div class="logo">Northwest Austin Dentists<span> Dental</span></div>
-  <nav><a href="#services">Services</a><a href="#why">Why Us</a><a class="cta-btn" href="#contact">Book an Appointment</a></nav>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand"><span class="mark">N</span> Northwest Austin Dentists</div>
+    <div class="nav-links">
+      <a href="#pak">Pakalpojumi</a><a href="#kap">Kāpēc mēs</a>
+      <a href="#ats">Atsauksmes</a><a href="#pie">Pieteikties</a>
+    </div>
+    <div class="nav-right">
+      <button class="toggle" id="tg" aria-label="Gaišs/tumšs">◐</button>
+      <a href="#pie" class="btn btn-gold">Pieteikt vizīti</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas id="mesh" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <div>
+      <div class="eyebrow">Zobārstniecība · Rīgā</div>
+      <h1>Skaists smaids sākas ar rūpēm, kurām vari uzticēties.</h1>
+      <p class="lead">Uzticams serviss ar caurspīdīgām cenām un AI asistentu, kas atbild uz jautājumiem un pieraksta jūs — arī ārpus darba laika.</p>
+      <div class="hero-cta">
+        <a href="#pie" class="btn btn-gold">Pieteikt bezmaksas konsultāciju →</a>
+        <a href="#pak" class="btn btn-ghost">Apskatīt pakalpojumus</a>
+      </div>
+      <div class="live-badge"><span class="dot"></span> AI asistents tiešsaistē — atbild uzreiz, jebkurā laikā</div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="sphere"></canvas>
+      <div class="orbit-hint">AI asistents · strādā 24/7</div>
+    </div>
+  </div>
 </header>
 
-<div class="hero">
-  <h1>Austin, TX's Gentle Family Dentistry</h1>
-  <p>Cleanings, cosmetic work, and emergencies — care that doesn't make you dread the chair.</p>
-  <a href="#contact">Book an Appointment →</a>
-</div>
-<div class="trust">New Patients Welcome · Most Insurance Accepted · Emergency Slots · Serving Austin, TX &amp; Surrounding Areas</div>
-
-<section id="services">
-  <h2>Our Services</h2>
-  <p class="sub">Cleanings, cosmetic work, and emergencies — care that doesn't make you dread the chair.</p>
-  <div class="grid">
-    <div class="card"><h3>Preventive Care</h3><p>Cleanings and exams that catch problems while they're still small.</p></div>
-    <div class="card"><h3>Cosmetic Dentistry</h3><p>Whitening, veneers, and bonding done conservatively.</p></div>
-    <div class="card"><h3>Emergency Dental</h3><p>Same-day relief when the pain cannot wait.</p></div>
-    <div class="card"><h3>Family Dentistry</h3><p>One practice for every age, from first tooth onward.</p></div>
+<section class="blk" id="pak">
+  <div class="wrap">
+    <div class="head reveal"><div class="eyebrow">Pakalpojumi</div><h2>Viss vienam veselam, drošam smaidam.</h2></div>
+    <div class="grid3">
+      <div class="card reveal tilt"><div class="ic">🦷</div><h3>Higiēna un profilakse</h3><p>Profesionāla tīrīšana un padomi ikdienai.</p><div class="from">no €39</div></div>
+      <div class="card reveal tilt"><div class="ic">✨</div><h3>Zobu balināšana</h3><p>Redzams rezultāts jau pēc pirmās vizītes.</p><div class="from">no €149</div></div>
+      <div class="card reveal tilt"><div class="ic">🔧</div><h3>Implanti un protezēšana</h3><p>Moderni implanti ar garantiju.</p><div class="from">no €690</div></div>
+      <div class="card reveal tilt"><div class="ic">🩹</div><h3>Zobu ārstēšana</h3><p>Bezsāpju ārstēšana, arī bailīgiem.</p><div class="from">no €55</div></div>
+      <div class="card reveal tilt"><div class="ic">😁</div><h3>Bērnu zobārstniecība</h3><p>Draudzīga vide, kur bērni nebaidās.</p><div class="from">no €35</div></div>
+      <div class="card reveal tilt"><div class="ic">💎</div><h3>Estētika un skaistums</h3><p>Smaida dizains, pielāgots tieši tev.</p><div class="from">Bezmaksas konsultācija</div></div>
+    </div>
   </div>
 </section>
 
-<section class="why" id="why">
-  <h2>Why Austin, TX Chooses Northwest Austin Dentists</h2>
-  <div class="grid" style="margin-top:34px;">
-    <div class="stat"><b>10+</b>Years serving locals</div>
-    <div class="stat"><b>100%</b>Satisfaction focus</div>
-    <div class="stat"><b>5★</b>Customer rated</div>
-    <div class="stat"><b>24/7</b>Always reachable</div>
-  </div>
-  <div class="grid" style="margin-top:40px;">
-    <div class="quote">"Exactly what we hoped for — clear communication and no surprises." — Local Customer</div>
-    <div class="quote">"Easy to reach, easy to work with. Would recommend to anyone." — Satisfied Customer</div>
+<section class="blk" id="kap" style="padding-top:20px">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><b data-to="12" data-suf="+">0</b><span>gadu pieredze</span></div>
+      <div class="stat"><b data-to="8400" data-sep="1">0</b><span>laimīgi pacienti</span></div>
+      <div class="stat"><b data-to="4.9" data-dec="1" data-suf="★">0</b><span>vidējais vērtējums</span></div>
+      <div class="stat"><b data-lit="24/7">0</b><span>AI asistents atbild</span></div>
+    </div>
   </div>
 </section>
 
-<section class="final" id="contact" style="border-radius:0;">
-  <h2 style="color:#fff;">Ready for a Dentist You Don't Dread?</h2>
-  <p style="max-width:560px;margin:10px auto 0;">Reach out today — we'll give you an honest recommendation, no pressure.</p>
-  <a href="mailto:marks.outreach@gmail.com?subject=Interested%20%E2%80%94%20Northwest%20Austin%20Dentists&amp;body=Hi%20Marks%2C%0A%0ASaw%20the%20demo%20you%20built%20for%20Northwest%20Austin%20Dentists.%20Tell%20me%20more.%0A%0AName%3A%0ABest%20number%20to%20reach%20me%3A%0A">Email us — we reply within a day</a>
-  <p style="margin-top:14px;font-size:14px;opacity:.9;">Or reply to the email that brought you here.</p>
+<section class="blk" id="ats">
+  <div class="wrap">
+    <div class="quote reveal">
+      <div class="eyebrow" style="margin-bottom:18px">Atsauksmes</div>
+      <p>“Beidzot uzņēmums, kas atbild uzreiz! Visu paskaidroja, cenas skaidras, un pieteicos čatā vēlu vakarā — atbildēja tūlīt. Iesaku!”</p>
+      <div class="who">Ilze K. · pacientе kopš 2023</div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="pie" style="padding-top:20px">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div class="eyebrow" style="color:var(--gold);margin-bottom:14px">Pieteikties</div>
+      <h2>Rezervē bezmaksas konsultāciju šodien.</h2>
+      <p>Aizpildi pieteikumu vai pajautā mūsu AI asistentam — tas pieraksta vizīti sekundēs, jebkurā diennakts laikā.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="#" class="btn btn-gold">Pieteikt vizīti →</a>
+        <button class="btn btn-ghost" id="openChat2" style="color:#EAF1F8;border-color:#2a3d52">💬 Runāt ar asistentu</button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  Northwest Austin Dentists · Austin, TX · Dental<br>
-  <span style="opacity:.6;font-size:12px;">Demo website concept · built to show a modern web presence</span>
+  <div class="wrap foot-in">
+    <div><b style="color:var(--ink)">Northwest Austin Dentists</b> · Zobārstniecība · Rīgā</div>
+    <div>+371 20 000 000 · info@aura.lv</div>
+  </div>
 </footer>
-</body>
-</html>
+
+<button class="chat-fab" id="fab" aria-label="Atvērt čatu">💬</button>
+<div class="chat-panel" id="panel" role="dialog" aria-label="AI asistents">
+  <div class="chat-hd"><b>Northwest Austin Dentists — AI asistents</b><small>● tiešsaistē · atbild uzreiz</small></div>
+  <div class="chat-body" id="cbody">
+    <div class="bub bot">Labdien! 👋 Esmu Northwest Austin Dentists asistents. Varu pastāstīt par pakalpojumiem, cenām un pierakstīt jūs uz vizīti. Ar ko varu palīdzēt?</div>
+  </div>
+  <div class="chat-in"><input id="cin" placeholder="Rakstiet ziņu…" aria-label="Ziņa"><button id="csend">➤</button></div>
+</div>
+
+<div class="tmpl">✦ MARKS DEMO TEMPLATE — pielāgojams katram klientam</div>
+
+<script>
+(function(){
+  // THEME
+  var root=document.documentElement, tg=document.getElementById('tg');
+  tg.onclick=function(){var d=root.getAttribute('data-theme');
+    var next=d?(d==='dark'?'light':'dark'):(matchMedia('(prefers-color-scheme:dark)').matches?'light':'dark');
+    root.setAttribute('data-theme',next);};
+
+  // REVEAL — kartes izlec PA VIENAI (staggered), kad tās ierauga skrollējot
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    var sibs=[].slice.call(e.target.parentNode.children).filter(function(x){return x.classList.contains('reveal');});
+    var idx=sibs.indexOf(e.target);e.target.style.transitionDelay=(Math.max(0,idx)*0.09)+'s';
+    e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // SKAITĪTĀJI — skaitās augšup no 0, kad ierauga (Arvīds: "kaut kam jānotiek skrollējot")
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    var el=e.target;cio.unobserve(el);
+    if(el.dataset.lit){el.textContent=el.dataset.lit;return;}
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suf||'',sep=el.dataset.sep,t0=null;
+    function fmt(v){var s=dec?v.toFixed(dec):Math.round(v).toString();if(sep)s=s.replace(/\B(?=(\d{3})+(?!\d))/g,' ');return s+suf;}
+    function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1400);var e2=1-Math.pow(1-p,3);
+      el.textContent=fmt(to*e2);if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);});},{threshold:.5});
+  document.querySelectorAll('.stat b[data-to],.stat b[data-lit]').forEach(function(el){cio.observe(el);});
+
+  // HERO PARALLAX skrollējot — sfēra un teksts kustas dažādos ātrumos (dziļums)
+  var heroTxt=document.querySelector('.hero-in>div:first-child'),stageEl=document.getElementById('stage');
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    addEventListener('scroll',function(){var y=scrollY;
+      if(y<800){if(stageEl)stageEl.style.transform='translateY('+(y*0.12)+'px)';
+        if(heroTxt)heroTxt.style.transform='translateY('+(y*-0.05)+'px)';}},{passive:true});}
+
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  // MESH GRADIENT (canvas)
+  var c=document.getElementById('mesh'),x=c.getContext('2d'),W,H,t=0;
+  var blobs=[{h:'#0FB9A6',dx:.6,dy:.4,px:.25,py:.35,r:.5},
+             {h:'#E09A38',dx:.4,dy:.7,px:.75,py:.3,r:.42},
+             {h:'#5AD6C6',dx:.8,dy:.3,px:.6,py:.75,r:.4}];
+  function rz(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  function hex(h,a){var n=parseInt(h.slice(1),16);return'rgba('+(n>>16&255)+','+(n>>8&255)+','+(n&255)+','+a+')';}
+  function draw(){
+    x.clearRect(0,0,W,H);
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    blobs.forEach(function(b,i){
+      var cx=(b.px+Math.sin(t*b.dx+i)*.08)*W, cy=(b.py+Math.cos(t*b.dy+i)*.08)*H;
+      var rad=b.r*Math.max(W,H);
+      var g=x.createRadialGradient(cx,cy,0,cx,cy,rad);
+      g.addColorStop(0,hex(b.h,dark?.30:.22));g.addColorStop(1,hex(b.h,0));
+      x.fillStyle=g;x.fillRect(0,0,W,H);
+    });
+    if(!reduce){t+=.006;requestAnimationFrame(draw);}
+  }
+  rz();draw();addEventListener('resize',function(){rz();if(reduce)draw();});
+
+  // HERO 3D PARALLAX
+  var stage=document.getElementById('stage'),floats=stage.querySelectorAll('.float');
+  if(!reduce){stage.addEventListener('mousemove',function(e){
+    var r=stage.getBoundingClientRect(),mx=(e.clientX-r.left)/r.width-.5,my=(e.clientY-r.top)/r.height-.5;
+    floats.forEach(function(f){var d=parseFloat(f.dataset.d);
+      f.style.transform='translateZ(0) rotateY('+(mx*10*d)+'deg) rotateX('+(-my*10*d)+'deg) translate('+(mx*16*d)+'px,'+(my*16*d)+'px)';});
+  });
+  stage.addEventListener('mouseleave',function(){floats.forEach(function(f){f.style.transform='';});});}
+
+  // CARD TILT
+  if(!reduce)document.querySelectorAll('.tilt').forEach(function(card){
+    card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect();
+      var mx=(e.clientX-r.left)/r.width-.5,my=(e.clientY-r.top)/r.height-.5;
+      card.style.transform='perspective(700px) rotateY('+(mx*6)+'deg) rotateX('+(-my*6)+'deg) translateY(-4px)';});
+    card.addEventListener('mouseleave',function(){card.style.transform='';});
+  });
+
+  // KINĒTISKS VIRSRAKSTS — vārdi pa vienam paceļas
+  var h1=document.querySelector('.hero h1');
+  if(h1&&!reduce){var words=h1.textContent.split(' ');
+    h1.innerHTML=words.map(function(w,i){return '<span class="w" style="animation-delay:'+(i*0.07)+'s">'+w+'</span>';}).join(' ');}
+
+  // 3D DAĻIŅU SFĒRA (globuss) — tīrs canvas, bez bibliotēkām, reaģē uz peli
+  var sc=document.getElementById('sphere');
+  if(sc){
+    // NEIRONU TĪKLS (AI smadzenes): punkti + savienojumi + signāli, kas ceļo
+    var sx=sc.getContext('2d'),SW,SH,pts=[],N=230,rot=0,ry=0,tgt=0,tgtx=0,rx=0,drag=false,lastX,lastY;
+    for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=i*2.399963;
+      pts.push({x:Math.cos(th)*r,y:y,z:Math.sin(th)*r,g:Math.random()<.14});}
+    // savienojumi: katram punktam ~3 tuvākie (aprēķina VIENREIZ — sfēra ir stingra)
+    var edges=[],seen={};
+    for(var i=0;i<N;i++){var ds=[];for(var j=0;j<N;j++){if(i===j)continue;
+      var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,dz=pts[i].z-pts[j].z;ds.push([dx*dx+dy*dy+dz*dz,j]);}
+      ds.sort(function(a,b){return a[0]-b[0];});
+      for(var k=0;k<3;k++){var j=ds[k][1],key=i<j?i+'-'+j:j+'-'+i;if(!seen[key]){seen[key]=1;edges.push([i,j]);}}}
+    var signals=[];  // {e:edge index, t:0..1, sp:speed}
+    function spawnSig(){if(signals.length<14)signals.push({e:(Math.random()*edges.length)|0,t:0,sp:.01+Math.random()*.02});}
+    function srz(){SW=sc.width=sc.offsetWidth;SH=sc.height=sc.offsetHeight;}
+    function isDark(){return root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);}
+    function sphcol(a,gold){if(gold)return'rgba(224,154,56,'+a+')';return isDark()?'rgba(90,214,198,'+a+')':'rgba(15,185,166,'+a+')';}
+    function sdraw(){
+      sx.clearRect(0,0,SW,SH);var cx=SW/2,cy=SH/2,R=Math.min(SW,SH)*.46;
+      if(!drag){ry+=(tgt-ry)*.06;rx+=(tgtx-rx)*.06;if(!reduce)rot+=.0028;}
+      var ay=rot+ry,ax=rx,cosY=Math.cos(ay),sinY=Math.sin(ay),cosX=Math.cos(ax),sinX=Math.sin(ax);
+      var P=[];
+      for(var i=0;i<pts.length;i++){var p=pts[i];
+        var x1=p.x*cosY-p.z*sinY, z1=p.x*sinY+p.z*cosY;
+        var y1=p.y*cosX-z1*sinX, z2=p.y*sinX+z1*cosX;
+        var s=1/(2-z2);P.push({px:cx+x1*R*s,py:cy+y1*R*s,z:z2,s:s,g:p.g});}
+      // SAVIENOJUMI (līnijas) — dziļāki blāvāki
+      sx.lineWidth=1;
+      for(var e=0;e<edges.length;e++){var A=P[edges[e][0]],B=P[edges[e][1]];
+        var a=((A.z+B.z)/2+1)/2;if(a<.12)continue;
+        sx.strokeStyle=sphcol(a*a*.42,false);sx.beginPath();sx.moveTo(A.px,A.py);sx.lineTo(B.px,B.py);sx.stroke();}
+      // SIGNĀLI (impulsi, kas ceļo pa savienojumiem)
+      if(!reduce){if(Math.random()<.12)spawnSig();
+        for(var i=signals.length-1;i>=0;i--){var g=signals[i];g.t+=g.sp;if(g.t>=1){signals.splice(i,1);continue;}
+          var A=P[edges[g.e][0]],B=P[edges[g.e][1]],mx=A.px+(B.px-A.px)*g.t,my=A.py+(B.py-A.py)*g.t;
+          var a=((A.z+B.z)/2+1)/2;sx.beginPath();sx.arc(mx,my,2.2,0,6.28);sx.fillStyle=sphcol(.9*a,true);sx.fill();
+          sx.beginPath();sx.arc(mx,my,5,0,6.28);sx.fillStyle=sphcol(.18*a,true);sx.fill();}}
+      // MEZGLI (punkti) virsū
+      P.sort(function(a,b){return a.z-b.z;});
+      for(var i=0;i<P.length;i++){var q=P[i];var a=(q.z+1)/2;
+        sx.beginPath();sx.arc(q.px,q.py,Math.max(.7,2.0*q.s),0,6.28);
+        sx.fillStyle=sphcol(.2+a*.75,q.g);sx.fill();}
+      requestAnimationFrame(sdraw);
+    }
+    srz();sdraw();addEventListener('resize',srz);
+    // Peles/pieskāriena mijiedarbība VIENMĒR (arī ja reduced-motion) — lietotāja
+    // darbība nav "animācija". Vilkšana griež sfēru, hover to viegli sasver.
+    sc.addEventListener('mousemove',function(e){
+      if(drag){tgt+=(e.clientX-lastX)*.008;tgtx+=-(e.clientY-lastY)*.008;lastX=e.clientX;lastY=e.clientY;}
+      else{var r=sc.getBoundingClientRect();tgt=((e.clientX-r.left)/r.width-.5)*1.6;tgtx=((e.clientY-r.top)/r.height-.5)*-1.0;}});
+    sc.addEventListener('mousedown',function(e){drag=true;lastX=e.clientX;lastY=e.clientY;e.preventDefault();});
+    addEventListener('mouseup',function(){drag=false;});
+    sc.addEventListener('touchstart',function(e){drag=true;var t=e.touches[0];lastX=t.clientX;lastY=t.clientY;},{passive:true});
+    sc.addEventListener('touchmove',function(e){var t=e.touches[0];
+      tgt+=(t.clientX-lastX)*.01;tgtx+=-(t.clientY-lastY)*.01;lastX=t.clientX;lastY=t.clientY;},{passive:true});
+    sc.addEventListener('touchend',function(){drag=false;});
+  }
+
+  // CHAT
+  var fab=document.getElementById('fab'),panel=document.getElementById('panel'),
+      body=document.getElementById('cbody'),inp=document.getElementById('cin'),send=document.getElementById('csend');
+  function openC(){panel.classList.add('on');inp.focus();}
+  fab.onclick=function(){panel.classList.toggle('on');if(panel.classList.contains('on'))inp.focus();};
+  document.getElementById('openChat2').onclick=openC;
+  function add(cls,txt){var d=document.createElement('div');d.className='bub '+cls;d.textContent=txt;body.appendChild(d);body.scrollTop=body.scrollHeight;}
+  // VALODA: LV / RU / EN — asistents atbild klienta valodā (Arvīds: "ne jau tikai latviski")
+  var lang='lv';
+  function detect(s){
+    if(/[а-яё]/i.test(s))return'ru';
+    if(/\b(hi|hello|hey|price|cost|how much|open|hours|book|appointment|english|do you|can you|speak|what|when)\b/.test(s))return'en';
+    if(/русск|по-русски|russian/.test(s))return'ru';
+    if(/english|angļu|anglisk/.test(s))return'en';
+    return null;
+  }
+  var TXT={
+    lv:{greet:'Sveiki! 😊 Prieks jūs redzēt. Varu pastāstīt par cenām, darba laikiem vai pierakstīt jūs. Kas jūs interesē?',
+        price:'higiēna no €39, balināšana no €149, implanti no €690, bērnu vizīte no €35',
+        hours:'Strādājam P–Pk 9:00–19:00, Se 10:00–15:00. Atstājiet vārdu un tālruni — pierakstīšu uz tuvāko brīvo laiku. Kā jūs sauc?',
+        thanks:'Prieks palīdzēt! 😊 Vai pierakstīt jūs uz vizīti?',
+        lang:'Protams! Varu runāt latviski, krieviski vai angliski. Ar ko varu palīdzēt?',
+        fb:'Labs jautājums! 😊 Varu palīdzēt ar cenām, darba laikiem vai pierakstīt jūs. Uzrakstiet, kas tieši jūs interesē.'},
+    en:{greet:'Hi there! 😊 Great to see you. I can tell you about prices, opening hours or book you an appointment. What are you interested in?',
+        price:'Common prices: hygiene from €39, whitening from €149, implants from €690, kids visit from €35. What would you like to know more about?',
+        hours:'We are open Mon–Fri 9:00–19:00, Sat 10:00–15:00. Leave your name and phone and I will book the nearest free slot. What is your name?',
+        thanks:'Happy to help! 😊 Would you like me to book you in?',
+        lang:'Of course! I can speak Latvian, Russian or English. How can I help you?',
+        fb:'Good question! 😊 I can help with prices, opening hours or booking. Just tell me what you need.'},
+    ru:{greet:'Здравствуйте! 😊 Рад вас видеть. Могу рассказать о ценах, часах работы или записать вас на приём. Что вас интересует?',
+        price:'Цены: гигиена от €39, отбеливание от €149, импланты от €690, детский приём от €35. О чём рассказать подробнее?',
+        hours:'Мы работаем Пн–Пт 9:00–19:00, Сб 10:00–15:00. Оставьте имя и телефон — запишу на ближайшее свободное время. Как вас зовут?',
+        thanks:'Рад помочь! 😊 Записать вас на приём?',
+        lang:'Конечно! Я могу говорить на латышском, русском или английском. Чем могу помочь?',
+        fb:'Хороший вопрос! 😊 Могу помочь с ценами, часами работы или записью. Напишите, что вас интересует.'}
+  };
+  // PIERAKSTA plūsma (vārds -> tālrunis -> apstiprināts), daudzvalodu
+  var cstate='chat', leadName='';
+  var BOOK={
+    lv:{ph:function(n){return'Paldies, '+n+'! 😊 Un jūsu tālruņa numurs?';},
+        done:function(n){return'Lieliski, '+n+'! ✅ Jūsu pieteikums pieņemts — sazināsimies tuvākajā laikā, lai apstiprinātu laiku. Palīdzēt vēl ar ko?';}},
+    en:{ph:function(n){return'Thanks, '+n+'! 😊 And your phone number?';},
+        done:function(n){return'Great, '+n+'! ✅ Your booking request is in — we will contact you shortly to confirm. Anything else?';}},
+    ru:{ph:function(n){return'Спасибо, '+n+'! 😊 И ваш номер телефона?';},
+        done:function(n){return'Отлично, '+n+'! ✅ Заявка принята — свяжемся, чтобы подтвердить время. Помочь ещё?';}}
+  };
+  function leadCard(n,ph){var d=document.createElement('div');d.className='bub bot';d.style.borderColor='var(--teal)';
+    d.innerHTML='📥 <b>Šo pieteikumu tagad saņemtu klīnikas īpašnieks:</b><br>Vārds: '+n+' · Tālrunis: '+ph+
+    '<br><small style="opacity:.7">(Demo režīmā nekas netiek sūtīts — īstajā versijā aiziet e-pastā.)</small>';
+    body.appendChild(d);body.scrollTop=body.scrollHeight;}
+  function answer(q){
+    var s=q.toLowerCase(); var d=detect(s); if(d)lang=d; var T=TXT[lang];
+    if(/(speak|русск|english|angļu|valod|язык|language|по-русски)/.test(s))return T.lang;
+    if(/sveik|labdien|čau|hei|hello|^hi\b|привет|здрав/.test(s)||s.length<3)return T.greet;
+    if(/cen|maks|izmaks|price|cost|how much|цен|стоим|сколько/.test(s))return T.price;
+    if(/laik|cikos|strād|atvēr|pieraksti|vizī|rezerv|hour|open|book|appoint|час|работа|запис|прием|^(jā|ja|labi|ok|да|yes)\b/.test(s)){cstate='name';return T.hours;}
+    if(/paldies|thank|спасиб/.test(s))return T.thanks;
+    return T.fb;}
+  function go(){var q=inp.value.trim();if(!q)return;add('usr',q);inp.value='';
+    if(cstate==='name'){leadName=(q.replace(/[^\p{L}\s-]/gu,'').trim()||'klients');cstate='phone';
+      setTimeout(function(){add('bot',BOOK[lang].ph(leadName));},420);return;}
+    if(cstate==='phone'){cstate='chat';var ph=q;
+      setTimeout(function(){add('bot',BOOK[lang].done(leadName));leadCard(leadName,ph);},420);return;}
+    setTimeout(function(){add('bot',answer(q));},450);}
+  send.onclick=go;inp.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
+
+  // KLIKŠĶINĀMI pakalpojumi — spied karti -> atver čatu un piesaka to pakalpojumu
+  document.querySelectorAll('#pak .card').forEach(function(card){
+    card.style.cursor='pointer';
+    card.addEventListener('click',function(){
+      var nosauk=card.querySelector('h3').textContent;
+      panel.classList.add('on');
+      add('usr','Interesē: '+nosauk);
+      cstate='name';
+      setTimeout(function(){add('bot','Lielisks izvēlums! 😊 «'+nosauk+'» — pierakstīšu jūs. Kā jūs sauc?');},400);
+      body.scrollTop=body.scrollHeight;
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  try{
+    var parts = location.pathname.split('/').filter(Boolean);
+    var slug = parts[parts.length - 1] || 'root';
+    var img = new Image();
+    img.src = 'http://169.58.4.28:8001/api/demo_view?slug=' + encodeURIComponent(slug) + '&t=' + Date.now();
+  }catch(e){}
+})();
+</script>
+</body></html>
